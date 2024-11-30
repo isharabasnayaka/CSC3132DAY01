@@ -7,7 +7,7 @@ $dbPass = getenv('DB_PASS');
 
 try {
 	//connect with database
-	$connect = mysqli_connect(SERVERNAME,USERNAME,PASSWORD,DBNAME);
+	$connect = mysqli_connect($dbHost,$dbName,$dbUser,$dbPass);
 	if (!$connect) {
 		die("connection failed".mysqli_connect_error());
 	} 
